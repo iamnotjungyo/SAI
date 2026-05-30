@@ -1,0 +1,171 @@
+{% load static %}
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>사이</title>
+    <link rel="stylesheet" href="{% static 'css/join.css' %}" />
+  </head>
+  <body>
+    <header>
+      <div class="headerOne">
+        <div class="arrowBtnBg">
+          <img src="{% static 'assets/join/left_arrow_icon.svg' %}" />
+        </div>
+        <h2>회원가입</h2>
+      </div>
+
+      <div class="headerTwo">
+        <b>사이</b>
+        <span>에 오신 걸 환영해요</span>
+      </div>
+
+      <div class="headerThree">
+        <span>프로필을 채우면 맞춤 친구를 추천해드려요</span>
+      </div>
+    </header>
+
+    <main>
+      <form class="joinForm">
+          {% csrf_token %} 
+        <div class="email">
+          <span class="labelSpan">이메일 주소</span>
+          <div class="longInputDiv">
+            <input class="emailInput" placeholder="you@university.ac.kr" />
+          </div>
+        </div>
+
+        <div class="password">
+          <span class="labelSpan">비밀번호</span>
+          <div class="longInputDiv">
+            <input class="passwordInput" placeholder="영문 숫자 8자 이상" />
+          </div>
+        </div>
+
+        <div class="country">
+          <span class="labelSpan">국적</span>
+          <div class="selectWrapper">
+            <img src="{% static 'assets/join/earth_icon.svg' %}" class="selectIcon" />
+            <select class="longSelect selectCountry">
+              <option>대한민국</option>
+              <option>중국</option>
+              <option>베트남</option>
+              <option>미국</option>
+              <option>일본</option>
+              <option>프랑스</option>
+              <option>몽골</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="record">
+          <div class="major">
+            <span class="labelSpan">학과(전공)</span>
+            <br />
+            <input class="majorInput" placeholder="예) 컴퓨터공학과" />
+          </div>
+
+          <div class="grade">
+            <span class="labelSpan">학년</span>
+            <br />
+            <select>
+              <option>1학년</option>
+              <option>2학년</option>
+              <option>3학년</option>
+              <option>4학년 이상</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="topic">
+          <span class="labelSpan">관심 주제 선정 (여러개 선택 가능)</span>
+          <table>
+            <tr>
+              <td>
+                <input type="checkbox" id="chip1" class="chipInput" />
+                <label for="chip1" class="chipLabel">
+                  <img src="{% static 'assets/join/sports_icon.svg' %}" class="chipImg" />
+                  체육
+                </label>
+              </td>
+              <td>
+                <input type="checkbox" id="chip2" class="chipInput" />
+                <label for="chip2" class="chipLabel">
+                  <img src="{% static 'assets/join/music_icon.svg' %}" class="chipImg" />
+                  음악
+                </label>
+              </td>
+              <td>
+                <input type="checkbox" id="chip3" class="chipInput" />
+                <label for="chip3" class="chipLabel">
+                  <img src="{% static 'assets/join/art_icon.svg' %}" class="chipImg" />
+                  예술
+                </label>
+              </td>
+              <td>
+                <input type="checkbox" id="chip4" class="chipInput" />
+                <label for="chip4" class="chipLabel">
+                  <img src="{% static 'assets/join/book_icon.svg' %}" class="chipImg" />
+                  독서
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="chip5" class="chipInput" />
+                <label for="chip5" class="chipLabel">
+                  <img src="{% static 'assets/join/cook_icon.svg' %}" class="chipImg" />
+                  요리</label
+                >
+              </td>
+              <td>
+                <input type="checkbox" id="chip6" class="chipInput" />
+                <label for="chip6" class="chipLabel">
+                  <img src="{% static 'assets/join/game_icon.svg' %}" class="chipImg" />
+                  게임</label
+                >
+              </td>
+              <td>
+                <input type="checkbox" id="chip7" class="chipInput" />
+                <label for="chip7" class="chipLabel">
+                  <img src="{% static 'assets/join/trip_icon.svg' %}" class="chipImg" />
+                  여행</label
+                >
+              </td>
+              <td>
+                <input type="checkbox" id="chip8" class="chipInput" />
+                <label for="chip8" class="chipLabel">
+                  <img src="{% static 'assets/join/more_icon.svg' %}" class="chipImg" />
+                  더보기</label
+                >
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="introduce">
+          <span class="labelSpan">자기소개</span>
+          <div class="longInputDiv">
+            <input
+              class="introduceInput"
+              placeholder="간단한 자기소개를 입력해주세요..."
+            />
+          </div>
+        </div>
+
+        <div class="joinBtnBg">
+          <img src="{% static 'assets/join/join_icon.svg' %}" />
+          <button>가입하고 시작하기</button>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <span class="footerSpan">이미 정해진 계정이 있으신가요?</span>
+      <button class="loginBtn">로그인</button>
+    </footer>
+
+    <script src="{% static 'js/join.js' %}"></script>
+  </body>
+</html>

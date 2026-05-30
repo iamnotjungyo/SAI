@@ -1,0 +1,306 @@
+button {
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 헤더 부분 */
+header {
+  width: calc(100% - 40px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 79px;
+  margin-top: 20px;
+}
+
+/* 헤더 내부 - 서비스명 */
+.headerOne {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+/* 헤더 내부의 아이콘 배경 */
+.earthIconBg {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  border-radius: 100%;
+  background-color: #d4d4d8;
+  color: #27272a;
+}
+
+/* 헤더 내부의 아이콘 */
+.earthIcon {
+  width: 15px;
+  height: 15px;
+}
+
+/* 헤더 내부 - 서비스 안내 문구 */
+.headerTwo {
+  width: 100%;
+  font-size: 13.13px;
+  color: #71717b;
+  font-weight: 500;
+}
+
+/* 헤더 구분선 */
+.headerDivider {
+  width: 100%;
+  border-bottom: 1px solid #e4e4e7;
+  margin-bottom: 10px;
+}
+
+/* 첫 번째 섹션 (서비스 소개) */
+.sectionOne {
+  width: calc(100% - 34px);
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  background-color: #fafafa;
+  border: 1px solid #e4e4e7;
+  padding: 20px 0px;
+}
+
+/* 서비스 로고, 서비스 소개 문구 */
+.divOne {
+  margin-left: 10px;
+  width: calc(100% - 40px);
+  height: 77.3px;
+  display: flex;
+  gap: 16px;
+}
+
+/* 서비스 로고 */
+.logoIcon {
+  height: 60px;
+  width: 60px;
+}
+
+.divOne > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3.3px;
+  min-width: 250px;
+  flex-shrink: 0;
+}
+
+.divOne > div > span {
+  font-size: 14px;
+  color: #52525c;
+}
+
+/* 번역 지원, 관심사 매칭 */
+.divTwo {
+  margin-top: 10px;
+  margin-left: 15px;
+  width: calc(100% - 40px);
+  height: 28px;
+  display: flex;
+  gap: 0px 8px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.divTwo > div {
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  background-color: #308afd;
+}
+
+.divTwo img {
+  width: 15px;
+}
+
+.divTwo span {
+  margin-left: 5px;
+  font-weight: 500;
+}
+
+/* 두 번째 섹션 (버튼 2개) */
+.sectionTwo {
+  width: calc(100% - 34px);
+  display: flex;
+  flex-direction: column;
+  padding: 24px 20px;
+  gap: 12px;
+  color: #27272a;
+}
+
+/* 두 번째 섹션의 버튼 스타일 */
+.sectionTwo button {
+  align-self: stretch;
+  border-radius: 12px;
+  background-color: #fafafa;
+  border: 1px solid #e4e4e7;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  gap: 16px;
+}
+
+/* 버튼 내부의 아이콘 배경 */
+.btnIconBg {
+  height: 44px;
+  width: 44px;
+  position: relative;
+  border-radius: 12px;
+  background-color: #e4e4e7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 버튼 내부 문단 */
+.btnParagraph {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sectionTwo b {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.sectionTwo span {
+  font-size: 11px;
+  color: #71717b;
+}
+
+.sectionTwo > div > img {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  letter-spacing: 0.5em;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* 세 번째 섹션 (6개 국가, 번역 지원 안내 문구) */
+.sectionThree {
+  width: calc(100% - 34px);
+  border-radius: 16px;
+  background-color: #fafafa;
+  border: 1px solid #e4e4e7;
+  height: auto;
+  font-size: 12px;
+  color: #52525c;
+}
+
+/* Earth 아이콘 */
+.sectionThree .earthIcon {
+  margin: 20px 0px 0px 20px;
+}
+
+/* 다양한 국적의 친구들 */
+.sectionThree .info {
+  margin: 20px 0px 0px 10px;
+  font-weight: 600;
+}
+
+/* 6개 국가 테이블 */
+table {
+  margin-left: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 6개 국가 테이블의 1행, 2행 */
+tr {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+/* 각각의 국가 (중국, 베트남, 미국, 일본, 프랑스, 몽골) */
+td {
+  padding: 3px 8px;
+  border-radius: 20px;
+  background-color: #fff;
+  border: 1px solid #d4d4d8;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  letter-spacing: 3px;
+}
+
+/* 각각의 국기 이모지 */
+td img.emoji {
+  width: 16px;
+  height: 16px;
+}
+
+.sectionThree div {
+  display: flex;
+  align-items: center;
+}
+
+/* 번역 지원 안내 문구 */
+.translateInfo {
+  margin: 20px 0px 20px 20px;
+}
+
+.translateInfo img {
+  margin-right: 5px;
+}
+
+/* 바텀 내비게이션 바 */
+nav {
+  position: fixed;
+  bottom: 0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05) inset;
+  border-top: 1px solid #e4e4e7;
+  width: 100%;
+  height: 59px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20%;
+}
+
+/* 바텀 내비게이션 바 내부의 각각의 버튼 스타일 지정 */
+nav > button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 비활성화된 바텀 내비게이션 바 메뉴의 Span */
+.nonActiveSpan {
+  font-size: 10px;
+  color: #9f9fa9;
+}
+
+/* 활성화된 바텀 내비게이션 바 메뉴의 Span */
+.activeSpan {
+  font-size: 10px;
+  font-weight: 500;
+  color: #308afd;
+}

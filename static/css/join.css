@@ -1,0 +1,243 @@
+button {
+  cursor: pointer;
+}
+
+body {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+}
+
+.headerOne {
+  display: flex;
+  align-items: center;
+}
+
+.headerTwo {
+  display: flex;
+}
+
+.headerTwo span {
+  color: #71717b;
+  font-size: 14px;
+}
+
+.headerThree {
+  color: #9f9fa9;
+  font-size: 12px;
+}
+
+header h2 {
+  margin-left: 12px;
+}
+
+.arrowBtnBg {
+  height: 36px;
+  width: 36px;
+  border-radius: 100%;
+  background-color: #f4f4f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  color: #52525c;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.labelSpan {
+  font-size: 14px;
+  font-weight: 500;
+  color: #71717b;
+  margin-bottom: 8px;
+}
+
+.longInputDiv {
+  border-radius: 14px;
+  background-color: #f9fafb;
+  border: 1.2px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 12px 48px 12px 16px;
+  text-align: left;
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 8px;
+}
+
+.longInputDiv input {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+}
+
+.selectWrapper {
+  position: relative;
+  display: flex;
+}
+
+.selectIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.longSelect {
+  min-width: 100%;
+  border-radius: 14px;
+  background-color: #f9fafb;
+  border: 1.2px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 12px 48px 12px 16px;
+  text-align: left;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.selectCountry {
+  padding-left: 40px;
+}
+
+.email {
+  margin-top: 30px;
+}
+.password {
+  margin-top: 8px;
+}
+.country {
+  margin-top: 8px;
+}
+
+.record {
+  display: flex;
+  margin-top: 11px;
+}
+
+.major {
+  flex: 3;
+}
+
+.major input {
+  height: 40px;
+  width: 100%;
+  border-radius: 12px;
+  background-color: #fafafa;
+  border: 1px solid #d4d4d8;
+  font-size: 14px;
+  color: #71717b;
+  margin-top: 8px;
+  padding-left: 12px;
+}
+
+.grade {
+  margin-left: 29px;
+  flex: 2;
+}
+
+.grade select {
+  height: 42px;
+  width: 100%;
+  border-radius: 12px;
+  background-color: #fafafa;
+  border: 1px solid #d4d4d8;
+  font-size: 14px;
+  color: #71717b;
+  margin-top: 8px;
+}
+
+.topic {
+  margin-top: 14px;
+}
+
+.topic table {
+  margin-top: 8px;
+}
+
+.chipInput {
+  display: none;
+}
+
+.chipLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border: 1px solid #d4d4d8;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #52525c;
+  background-color: #fafafa;
+}
+
+.chipLabel img {
+  padding-right: 5.5px;
+}
+
+.chipInput:checked + .chipLabel {
+  background-color: #308afd;
+  color: white;
+  border: none;
+}
+
+.chipInput:checked + .chipLabel .chipImg {
+  filter: brightness(0) invert(1);
+}
+
+.introduce {
+  margin-top: 13px;
+}
+
+.joinBtnBg {
+  margin-top: 36px;
+  margin-bottom: 25px;
+  width: 100%;
+  border-radius: 12px;
+  background-color: #308afd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0px;
+  gap: 8px;
+  text-align: center;
+  font-size: 14px;
+  border: none;
+}
+
+.joinBtnBg button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+
+.footer {
+  letter-spacing: normal;
+}
+
+.footerSpan {
+  font-size: 16px;
+  color: #9f9fa9;
+}
+
+.loginBtn {
+  text-decoration: underline;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: #3f3f46;
+  font-weight: 600;
+}

@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>사이</title>
+
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" />
+  </head>
+
+  <body>
+    <header>
+      <img class="logoIcon" src="{% static 'assets/login/logo_icon.svg' %}" alt="앱 로고" />
+      <b class="appName">사이</b>
+      <div class="appInfo">대학 생활을 함께할 친구, 지금 만나요</div>
+    </header>
+
+    <main>
+      <form class="loginForm">
+          {% csrf_token %}
+        <div class="inputContainer">
+          <div class="label">학교 이메일</div>
+          <div class="inputBorder">
+            <img class="inputIcon" src="{% static 'assets/login/email_icon.svg' %}" />
+            <input
+              class="userEmail"
+              name="userEmail"
+              placeholder="yourname@univ.ac.kr"
+            />
+          </div>
+        </div>
+
+        <div class="inputContainer">
+          <div class="label">비밀번호</div>
+          <div class="inputBorder">
+            <img class="inputIcon" src="{% static 'assets/login/password_icon.svg' %}" />
+            <input
+              class="userPassword"
+              name="userPassword"
+              type="password"
+              placeholder="영문·숫자 8자 이상"
+            />
+
+            <button class="passwordToggle">
+              <img src="{% static 'assets/login/password_eye_icon.svg' %}" />
+            </button>
+          </div>
+        </div>
+
+        <input type="submit" value="로그인" class="loginBtn" />
+      </form>
+
+      <div class="socialContainer">
+        <div class="socialDivider"></div>
+        <span class="socialSpan"> 또는 소셜 계정으로 시작 </span>
+      </div>
+
+      <div class="socialIcons">
+        <button class="socialIconBg">
+          <img class="socialIcon" src="{% static 'assets/login/google_icon.svg' %}" />
+        </button>
+
+        <button class="socialIconBg">
+          <img class="socialIcon" src="{% static 'assets/login/apple_icon.svg' %}" />
+        </button>
+      </div>
+
+      <div class="spanBtns">
+        <button class="spanBtn joinBtn">회원가입</button>
+        <div>|</div>
+        <button class="spanBtn">비밀번호 재설정</button>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footerLeft">
+        <div class="univIconBg">
+          <img src="{% static 'assets/login/univ_icon.svg' %}" />
+        </div>
+      </div>
+
+      <div class="footerRight">
+        <b>대학 인증&nbsp</b>
+        <span class="footerSpan">후 외국인·내국인 친구를 만들어요.</span>
+
+        <div class="footerP">
+          <img src="{% static 'assets/login/translate_icon.svg' %}" />
+          <div>&nbsp채팅은 실시간 번역 지원</div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="{% static 'js/login.js' %}"></script>
+  </body>
+</html>

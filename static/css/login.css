@@ -1,0 +1,254 @@
+button {
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 헤더 부분 */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 20px 8px;
+  font-size: 30px;
+  color: #000;
+}
+
+/* 앱 로고 */
+.logoIcon {
+  width: 97px;
+  height: 97px;
+  margin-bottom: 10px;
+}
+
+/* 앱 소개 문구 */
+.appInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 0px 0px;
+  font-size: 14px;
+  color: #71717b;
+  position: relative;
+  font-weight: 500;
+}
+
+main {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 20px;
+  gap: 20px;
+  font-size: 12px;
+  color: #71717b;
+}
+
+/* 사용자 입력란 container */
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+/* 사용자 입력란 테두리 */
+.inputBorder {
+  border-radius: 12px;
+  background-color: #fafafa;
+  border: 1px solid #d4d4d8;
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #9f9fa9;
+}
+
+/* 사용자 입력란 내부 아이콘 */
+.inputIcon {
+  width: 13px;
+  height: 13px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* 비밀번호 토글 (보여주기/숨기기 버튼) */
+.passwordToggle {
+  border: none;
+  margin-left: auto;
+  background-color: transparent;
+}
+
+/* 사용자 입력란 */
+input {
+  margin-left: 10px;
+  width: 90%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: none;
+}
+
+/* 로그인 버튼 */
+.loginBtn {
+  cursor: pointer;
+  width: 100%;
+  margin: 20px 0px 0px 0px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0px;
+  position: relative;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  font-family: "Font Awesome 5 Free";
+  box-shadow:
+    0px 1px 3px rgba(0, 0, 0, 0.1),
+    0px 1px 2px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  border: none;
+  background:
+    linear-gradient(90deg, #308afd, #1fc3ac),
+    linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+}
+
+/* 소셜 계정 관련*/
+.socialContainer {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #9f9fa9;
+}
+
+/* 소셜 계정 가로선 */
+.socialDivider {
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  border-top: 1px solid #e4e4e7;
+}
+
+/* 소셜 계정 문구 */
+.socialSpan {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 12px;
+  position: relative;
+}
+
+/* 소셜 로그인 버튼(icon) container */
+.socialIcons {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 0px 0px;
+  gap: 24px;
+  font-size: 16px;
+  color: #52525c;
+}
+
+/* 소셜 로그인 버튼 icon의 배경 */
+.socialIconBg {
+  height: 40px;
+  width: 40px;
+  position: relative;
+  border-radius: 100%;
+  background-color: #f4f4f5;
+  border: 1px solid #e4e4e7;
+}
+
+/* 소셜 로그인 버튼 (icon) */
+.socialIcon {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+}
+
+/* [회원가입+비밀번호 재설정] 버튼의 container */
+.spanBtns {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* [회원가입+비밀번호 재설정] 버튼 */
+.spanBtn {
+  border: none;
+  background-color: transparent;
+  line-height: 16px;
+}
+
+/* 푸터 부분 */
+footer {
+  width: 100%;
+  height: 90px;
+  margin-top: 30px;
+  position: relative;
+  border-radius: 12px;
+  background-color: #fafafa;
+  border: 1px solid #e4e4e7;
+}
+
+/* 푸터의 왼쪽 섹션 */
+.footerLeft {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 36px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  padding: 4px 0px 0px;
+}
+
+/* 푸터 왼쪽 섹션의 icon */
+.univIconBg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 33554400px;
+  background-color: #e4e4e7;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 푸터의 오른쪽 섹션 */
+.footerRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 64px;
+  height: 65.5px;
+  font-size: 14px;
+}
+
+/* 푸터의 오른쪽 섹션 문구 */
+.footerSpan {
+  color: #52525c;
+}
+
+/* 푸터의 오른쪽 섹션 문구 */
+.footerP {
+  position: absolute;
+  top: 49.5px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #9f9fa9;
+}

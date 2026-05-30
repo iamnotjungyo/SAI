@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>사이</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+  </head>
+
+  <body>
+    <header>
+      <div class="headerOne">
+        <b>사이</b>
+        <div class="earthIconBg">
+          <img class="earthIcon" src="{% static 'assets/home/earth_icon.svg' %}" />
+        </div>
+      </div>
+
+      <div class="headerTwo">
+        <div>외국인 유학생과 대학 공동체를 잇는 채팅 플랫폼</div>
+      </div>
+    </header>
+
+    <div class="headerDivider"></div>
+
+    <section class="sectionOne">
+      <div class="divOne">
+        <img class="logoIcon" src="{% static 'assets/home/logo_icon.svg' %}" />
+        <div>
+          <b>다름을 잇는 연결, 사이</b>
+          <span>
+            외국인 유학생과 내국인 재학생<br />자연스럽게 교류할 수 있도록
+            돕습니다.
+          </span>
+        </div>
+      </div>
+
+      <div class="divTwo">
+        <div>
+          <img src="{% static 'assets/home/translate_white_icon.svg' %}" />
+          <span>번역 지원</span>
+        </div>
+        <div>
+          <img src="{% static 'assets/home/people_icon.svg' %}" />
+          <span>관심사 매칭</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="sectionTwo">
+      <button class="recmdBtn">
+        <div class="btnIconBg">
+          <img src="{% static 'assets/home/friend_icon.svg' %}" />
+        </div>
+        <div class="btnParagraph">
+          <b>친구 추천 · 매칭</b>
+          <span>관심사 기반 내국인·유학생 연결</span>
+        </div>
+        <img src="{% static 'assets/home/arrow_icon.svg' %}" />
+      </button>
+
+      <button class="friendBtn">
+        <div class="btnIconBg">
+          <img src="{% static 'assets/home/chat_icon.svg' %}" />
+        </div>
+
+        <div class="btnParagraph">
+          <b>채팅 · 번역 지원</b>
+          <span>실시간 번역, 학교·상담 채팅</span>
+        </div>
+        <img src="{% static 'assets/home/arrow_icon.svg' %}" />
+      </button>
+    </section>
+
+    <section class="sectionThree">
+      <div>
+        <img class="earthIcon" src="{% static 'assets/home/earth_icon.svg' %}" />
+        <b class="info">다양한 국적의 친구들</b>
+      </div>
+
+      <table>
+        <tr>
+          <td>🇨🇳 중국</td>
+          <td>🇻🇳 베트남</td>
+          <td>🇺🇸 미국</td>
+        </tr>
+
+        <tr>
+          <td>🇯🇵 일본</td>
+          <td>🇫🇷 프랑스</td>
+          <td>🇲🇳 몽골</td>
+        </tr>
+      </table>
+
+      <div class="translateInfo">
+        <img src="{% static 'assets/home/translate_icon.svg' %}" />
+        <div>모든 채팅은 자동 번역으로 편하게</div>
+      </div>
+    </section>
+
+    <nav>
+      <button class="homeNav">
+        <img class="activeIcon" src="{% static 'assets/home/home_active_nav_icon.svg' %}" />
+        <span class="activeSpan">홈</span>
+      </button>
+
+      <button class="friendNav">
+        <img class="nonActiveIcon" src="{% static 'assets/home/chat_nav_icon.svg' %}" />
+        <span class="nonActiveSpan">채팅</span>
+      </button>
+
+      <button class="profileNav">
+        <img class="nonActiveIcon" src="{% static 'assets/home/profile_nav_icon.svg' %}" />
+        <span class="nonActiveSpan">프로필</span>
+      </button>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js"></script>
+
+    <script src="{% static 'js/home.js' %}"></script>
+  </body>
+</html>
