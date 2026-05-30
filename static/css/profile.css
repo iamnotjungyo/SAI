@@ -1,0 +1,253 @@
+button {
+  cursor: pointer;
+}
+
+body {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  height: 36px;
+  border-bottom: 1px solid #e4e4e7;
+  display: flex;
+  padding: 8px 20px 16px;
+  font-size: 20px;
+}
+
+.profileImg {
+  margin-right: 18px;
+  margin-bottom: 10.5px;
+}
+
+hr {
+  margin-bottom: 8px;
+}
+
+.sectionOne {
+  width: 100%;
+  height: auto;
+  box-shadow:
+    0px 1px 3px rgba(0, 0, 0, 0.1),
+    0px 1px 2px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  background-color: #fff;
+  border: 1px solid #e4e4e7;
+  box-sizing: border-box;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.sectionTwo {
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  background-color: #fafafa;
+  border: 1px solid #e4e4e7;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 12px;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.sectionThree {
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  background-color: #fafafa;
+  border: 1px solid #e4e4e7;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 7px;
+  box-sizing: border-box;
+  margin-bottom: 54px;
+}
+
+.personalInfo {
+  display: flex;
+}
+
+.personalTxt b {
+  font-size: 17px;
+}
+
+.personalTxt .userCountry {
+  font-size: 10px;
+}
+
+.infoRow {
+  display: flex;
+}
+
+.infoRow > .userSchool,
+.userMajor,
+.userGrade {
+  margin-left: auto;
+  color: #3f3f46;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.spanLabel {
+  color: #9f9fa9;
+  font-size: 12px;
+}
+
+.editBtn {
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #9f9fa9;
+  font-weight: 500;
+  font-size: 13.5px;
+  letter-spacing: -0.12em;
+}
+
+.sectionTwoHeader {
+  display: flex;
+}
+
+.addInterestBtn {
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  color: #9f9fa9;
+  font-size: 10px;
+}
+
+.editIntroBtn {
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  color: #9f9fa9;
+  font-size: 10px;
+}
+
+.friendBtnBg {
+  width: 100%;
+  height: 48px;
+  border-radius: 12px;
+  background-color: #308afd;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.friendBtnBg button {
+  font-size: 14px;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+}
+
+.hobbyInterest {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.interestTag {
+  padding: 8px 12px;
+  border-radius: 20px;
+  background: #eee;
+  text-align: center;
+}
+
+.introduce {
+  color: #71717b;
+  font-size: 11.06px;
+}
+
+.personalInput,
+.introduceInput,
+.hobbyInterestInput {
+  display: none;
+}
+
+table {
+  margin-top: 8px;
+}
+
+.chipInput {
+  display: none;
+}
+
+.chipLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border: 1px solid #d4d4d8;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #52525c;
+  background-color: #fafafa;
+}
+
+.chipLabel img {
+  padding-right: 5.5px;
+}
+
+.chipInput:checked + .chipLabel {
+  background-color: #308afd;
+  color: white;
+  border: none;
+}
+
+.chipInput:checked + .chipLabel .chipImg {
+  filter: brightness(0) invert(1);
+}
+
+/* 바텀 내비게이션 바 */
+nav {
+  position: fixed;
+  bottom: 0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05) inset;
+  border-top: 1px solid #e4e4e7;
+  width: 100%;
+  height: 59px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20%;
+}
+
+/* 바텀 내비게이션 바 내부의 각각의 버튼 스타일 지정 */
+nav > button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 비활성화된 바텀 내비게이션 바 메뉴의 Span */
+.nonActiveSpan {
+  font-size: 10px;
+  color: #9f9fa9;
+}
+
+/* 활성화된 바텀 내비게이션 바 메뉴의 Span */
+.activeSpan {
+  font-size: 10px;
+  font-weight: 500;
+  color: #308afd;
+}
