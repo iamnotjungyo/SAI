@@ -103,3 +103,17 @@ class UserProfileView(APIView):
         show_phone = Interest.is_mutual(request.user, target_user)
         serializer = PublicProfileSerializer(profile, context={'show_phone': show_phone})
         return Response(serializer.data)
+    
+# ─── 회원탈퇴 ──────────────────────────────────────────────────────────────────
+
+class UserDeleteView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def delete(self, request):
+        user = request.user
+        user.delete()
+
+        return Response(
+            {"message": "회원탈퇴 완료"},
+            status=status.HTTP_200_OK
+        )
