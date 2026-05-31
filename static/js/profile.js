@@ -11,6 +11,22 @@ const homeNav = document.querySelector(".homeNav"); // 바텀 내비게이션 �
 const friendNav = document.querySelector(".friendNav"); // 바텀 내비게이션 바 - [채팅] 버튼
 const profileNav = document.querySelector(".profileNav"); // 바텀 내비게이션 바 - [프로필] 버튼
 
+// CSRF 토큰 가져오는 함수
+function getCookie(name) {
+  let cookieValue = null;
+  if (document.cookie && document.cookie !== "") {
+    const cookies = document.cookie.split(";");
+    for (let cookie of cookies) {
+      cookie = cookie.trim();
+      if (cookie.startsWith(name + "=")) {
+        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+        break;
+      }
+    }
+  }
+  return cookieValue;
+}
+
 // 타인 프로필 조회 (GET)
 async function getUserProfile(userId) {
   const res = await fetch(`/api/profile/${userId}/`, {
@@ -91,11 +107,14 @@ function renderProfile(profile) {
 }
 
 // 내 프로필 수정 (PATCH)
+const csrfToken = getCookie("csrftoken");
+
 async function updateProfile(data) {
   const res = await fetch("/api/profile/me/", {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
+      "X-CSRFToken": csrfToken,
     },
     credentials: "include",
     body: JSON.stringify(data),
