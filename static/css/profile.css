@@ -214,6 +214,16 @@ table {
   filter: brightness(0) invert(1);
 }
 
+.resignBtn {
+  text-decoration: underline;
+  background-color: transparent;
+  border: none;
+  font-size: 13px;
+  color: #9f9fa9;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
 /* 바텀 내비게이션 바 */
 nav {
   position: fixed;
