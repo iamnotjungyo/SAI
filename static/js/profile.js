@@ -6,6 +6,7 @@ const editBtn = document.querySelector(".editBtn"); // 학적 정보 수정 버�
 const editIntroBtn = document.querySelector(".editIntroBtn"); // 자기소개 수정 버튼
 const addInterestBtn = document.querySelector(".addInterestBtn"); // 관심사, 취미 수정 버튼
 const friendBtn = document.querySelector(".friendBtnBg"); // [관심 페이지로 이동] 버튼
+const resignBtn = document.querySelector(".resignBtn"); // [회원 탈퇴] 버튼
 
 const homeNav = document.querySelector(".homeNav"); // 바텀 내비게이션 바 - [홈] 버튼
 const friendNav = document.querySelector(".friendNav"); // 바텀 내비게이션 바 - [채팅] 버튼
@@ -126,6 +127,28 @@ async function updateProfile(data) {
   }
 
   if (res.ok) alert("프로필이 수정되었습니다.");
+
+  return await res.json();
+}
+
+// 회원 탈퇴 DELETE 요청
+async function resign() {
+  const res = await fetch("/api/users/me/", {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+      "X-CSRFToken": csrfToken,
+    },
+    credentials: "include",
+  });
+
+  // 회원탈퇴 실패
+  if (!res.ok) {
+    throw new Error("회원탈퇴 실패");
+    return;
+  }
+  alert("회원탈퇴가 완료되었습니다.");
+  location.href = "/";
 
   return await res.json();
 }
@@ -251,6 +274,12 @@ addInterestBtn.addEventListener("click", async (event) => {
 friendBtn.addEventListener("click", async (event) => {
   event.preventDefault();
   location.href = "/friend/";
+});
+
+// [회원 탈퇴] 버튼 클릭
+resignBtn.addEventListener("click", async (event) => {
+  event.preventDefault();
+  resign();
 });
 
 // 바텀 내비게이션 바 - [홈] 버튼 클릭 시, home(홈)으로 이동
