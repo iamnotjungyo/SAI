@@ -16,4 +16,5 @@ urlpatterns = [
     path('friend/', page('friend.html'), name='friend'),
     path('chat/', page('chat.html'), name='chat'),
     path('likesme/', page('likesme.html'), name='likesme'),
+    path('profile/', page('profile.html'), name='profile'),
 ]
